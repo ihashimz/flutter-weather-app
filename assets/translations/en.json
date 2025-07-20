@@ -1,0 +1,22 @@
+{
+  "app_title": "Weather App",
+  "loading": "Loading...",
+  "error": "Error",
+  "retry": "Retry",
+  "no_data": "No data available",
+  "weather": {
+    "current_weather": "Current Weather",
+    "temperature": "Temperature",
+    "feels_like": "Feels like",
+    "humidity": "Humidity",
+    "pressure": "Pressure",
+    "wind_speed": "Wind Speed",
+    "visibility": "Visibility",
+    "description": "Description"
+  },
+  "errors": {
+    "network_error": "Network error. Please check your internet connection.",
+    "server_error": "Server error. Please try again later.",
+    "unknown_error": "An unknown error occurred."
+  }
+}

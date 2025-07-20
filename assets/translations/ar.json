@@ -1,0 +1,22 @@
+{
+  "app_title": "تطبيق الطقس",
+  "loading": "جاري التحميل...",
+  "error": "خطأ",
+  "retry": "إعادة المحاولة",
+  "no_data": "لا توجد بيانات متاحة",
+  "weather": {
+    "current_weather": "الطقس الحالي",
+    "temperature": "درجة الحرارة",
+    "feels_like": "يشعر وكأنه",
+    "humidity": "الرطوبة",
+    "pressure": "الضغط",
+    "wind_speed": "سرعة الرياح",
+    "visibility": "الرؤية",
+    "description": "الوصف"
+  },
+  "errors": {
+    "network_error": "خطأ في الشبكة. يرجى التحقق من اتصال الإنترنت.",
+    "server_error": "خطأ في الخادم. يرجى المحاولة مرة أخرى لاحقاً.",
+    "unknown_error": "حدث خطأ غير معروف."
+  }
+}
