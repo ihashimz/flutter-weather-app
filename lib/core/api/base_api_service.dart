@@ -23,19 +23,21 @@ abstract class BaseApiService {
         case DioExceptionType.connectionTimeout:
         case DioExceptionType.receiveTimeout:
         case DioExceptionType.sendTimeout:
-          throw NetworkException(message: 'Connection timeout');
+          throw const NetworkException(message: 'Connection timeout');
         case DioExceptionType.connectionError:
-          throw NetworkException(message: 'No internet connection');
+          throw const NetworkException(message: 'No internet connection');
         case DioExceptionType.badResponse:
-          throw ServerException(
-            message: e.response?.data['message'] ?? 'Server error',
-          );
+          final message = e.response?.data is Map && 
+                         e.response?.data['message'] != null
+              ? e.response!.data['message']
+              : 'Server error';
+          throw ServerException(message: message);
         case DioExceptionType.cancel:
-          throw NetworkException(message: 'Request cancelled');
+          throw const NetworkException(message: 'Request cancelled');
         case DioExceptionType.unknown:
-          throw NetworkException(message: 'Unknown error occurred');
+          throw const NetworkException(message: 'Unknown error occurred');
         default:
-          throw NetworkException(message: 'Network error');
+          throw const NetworkException(message: 'Network error');
       }
     } catch (e) {
       if (e is ServerException || e is NetworkException) {
