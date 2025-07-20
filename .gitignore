@@ -46,6 +46,10 @@ linked_*.ds
 unlinked.ds
 unlinked_spec.ds
 
+# Generated files (json_serializable, etc.)
+**/*.g.dart
+**/*.freezed.dart
+
 # Android related
 **/android/**/gradle-wrapper.jar
 .gradle/
