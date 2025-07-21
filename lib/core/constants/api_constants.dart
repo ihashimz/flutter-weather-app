@@ -1,8 +1,12 @@
+import 'package:flutter_dotenv/flutter_dotenv.dart';
+
 class ApiConstants {
   // Use CORS proxy for web testing, direct API for mobile/desktop
   static const String baseUrl = 'https://api.openweathermap.org/data/2.5';
   static const String corsProxyUrl = 'https://cors-anywhere.herokuapp.com/https://api.openweathermap.org/data/2.5';
-  static const String apiKey = '2f4565f193d4a168ef3b85cd40075a71';
+  
+  // Load API key from environment variables
+  static String get apiKey => dotenv.env['OPENWEATHER_API_KEY'] ?? '';
   
   static const String weatherEndpoint = '/weather';
   

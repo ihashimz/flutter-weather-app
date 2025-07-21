@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 import 'core/services/service_locator.dart';
 import 'features/weather/domain/usecases/get_current_weather.dart';
@@ -8,6 +9,9 @@ import 'features/weather/presentation/pages/weather_home_page.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  
+  // Load environment variables
+  await dotenv.load(fileName: ".env");
   
   await initServiceLocator();
 
