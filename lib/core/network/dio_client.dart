@@ -13,8 +13,8 @@ class DioClient {
   void _setupInterceptors() {
     _dio.options = BaseOptions(
       baseUrl: ApiConstants.baseUrl,
-      connectTimeout: Duration(milliseconds: ApiConstants.connectionTimeout),
-      receiveTimeout: Duration(milliseconds: ApiConstants.receiveTimeout),
+      connectTimeout: const Duration(milliseconds: ApiConstants.connectionTimeout),
+      receiveTimeout: const Duration(milliseconds: ApiConstants.receiveTimeout),
       headers: {
         'Content-Type': 'application/json',
       },

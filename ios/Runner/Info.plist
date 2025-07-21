@@ -45,5 +45,17 @@
 	<true/>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
+	<!-- Network permissions -->
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+	
+	<!-- Location permissions -->
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>📍 This app needs access to your location to provide accurate weather information for your current area.</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>📍 This app needs access to your location to provide accurate weather information for your current area.</string>
 </dict>
 </plist>
